@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALYMAN | Juggler & Street Performer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+    <!-- Floating Balls Background -->
+    <div class="floating-balls">
+        <div class="ball ball-1"></div>
+        <div class="ball ball-2"></div>
+        <div class="ball ball-3"></div>
+        <div class="ball ball-4"></div>
+        <div class="ball ball-5"></div>
+        <div class="ball ball-6"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <span class="logo-text">CHALYMAN</span>
+            <span class="logo-star">✦</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#shows" class="nav-link">Shows</a>
+            <a href="#contact" class="nav-link">Book</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#shows" class="mobile-link">Shows</a>
+        <a href="#contact" class="mobile-link">Book</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="tag-line"></span>
+                <span class="tag-text">Street Performer • Juggler • Entertainer</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">
+                    <span class="char">C</span><span class="char">H</span><span class="char">A</span><span class="char">L</span><span class="char">Y</span><span class="char">M</span><span class="char">A</span><span class="char">N</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">More Than A Star, A Constellation.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Book The Show</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#shows" class="btn btn-secondary">
+                    <span>See Shows</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="juggling-ring ring-1"></div>
+            <div class="juggling-ring ring-2"></div>
+            <div class="juggling-ring ring-3"></div>
+            <div class="star-burst">
+                <svg viewBox="0 0 100 100">
+                    <polygon points="50,0 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35"/>
+                </svg>
+            </div>
+            <!-- Animated juggling arc -->
+            <div class="hero-juggle-arc">
+                <svg class="arc-svg" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Parabolic arcs -->
+                    <path class="arc-path arc-path-1" d="M60 220 Q120 40 210 220" stroke="rgba(255,107,53,0.25)" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
+                    <path class="arc-path arc-path-2" d="M210 220 Q300 40 360 220" stroke="rgba(255,215,0,0.25)" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
+                    <path class="arc-path arc-path-3" d="M135 220 Q210 20 285 220" stroke="rgba(46,213,115,0.20)" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
+                    <!-- Ball 1 - orange -->
+                    <circle r="10" fill="#ff6b35" opacity="0.9">
+                        <animateMotion dur="1.6s" repeatCount="indefinite" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1">
+                            <mpath href="#arc1"/>
+                        </animateMotion>
+                    </circle>
+                    <!-- Ball 2 - gold -->
+                    <circle r="10" fill="#ffd700" opacity="0.9">
+                        <animateMotion dur="1.6s" begin="-0.53s" repeatCount="indefinite" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1">
+                            <mpath href="#arc2"/>
+                        </animateMotion>
+                    </circle>
+                    <!-- Ball 3 - green -->
+                    <circle r="10" fill="#2ed573" opacity="0.9">
+                        <animateMotion dur="1.6s" begin="-1.07s" repeatCount="indefinite" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1">
+                            <mpath href="#arc3"/>
+                        </animateMotion>
+                    </circle>
+                    <!-- Named paths for animateMotion -->
+                    <defs>
+                        <path id="arc1" d="M60 220 Q120 40 210 220 Q300 40 360 220"/>
+                        <path id="arc2" d="M210 220 Q300 40 360 220 Q420 40 480 220"/>
+                        <path id="arc3" d="M135 220 Q210 20 285 220 Q360 20 435 220"/>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>FESTIVALS</span>
+            <span class="marquee-star">✦</span>
+            <span>CORPORATE</span>
+            <span class="marquee-star">✦</span>
+            <span>PRIVATE EVENTS</span>
+            <span class="marquee-star">✦</span>
+            <span>FESTIVALS</span>
+            <span class="marquee-star">✦</span>
+            <span>CORPORATE</span>
+            <span class="marquee-star">✦</span>
+            <span>PRIVATE EVENTS</span>
+            <span class="marquee-star">✦</span>
+            <span>FESTIVALS</span>
+            <span class="marquee-star">✦</span>
+            <span>CORPORATE</span>
+            <span class="marquee-star">✦</span>
+            <span>PRIVATE EVENTS</span>
+            <span class="marquee-star">✦</span>
+        </div>
+    </div>
+
+    <!-- Showreel Section -->
+    <section class="showreel">
+        <div class="showreel-container">
+            <div class="showreel-label">
+                <span class="section-label">Watch</span>
+                <h2 class="showreel-title">See The<br>Magic Live</h2>
+            </div>
+            <div class="showreel-video">
+                <div class="video-embed-wrapper">
+                    <iframe src="https://www.youtube.com/embed/K460W30NF6w?rel=0&modestbranding=1"
+                            title="CHALYMAN — Promo Video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Street Show Section -->
+    <section class="street-show">
+        <div class="street-show-inner">
+            <div class="street-show-header">
+                <span class="section-label">The Performance</span>
+                <h2 class="section-title">Street<br>Show</h2>
+            </div>
+            <div class="street-show-body">
+                <p class="street-show-lead">Step right up and prepare for an exciting, family-friendly street show where <strong>YOU</strong> become part of the action. Join Chalyman, a talented juggler from Venezuela, for a lively, interactive performance filled with high-level juggling, silly humor, and plenty of surprises.</p>
+                <div class="street-show-cols">
+                    <p>From the very start, the audience plays a key role — whether it's helping with tricks, being part of the comedy moments, or just sharing in the laughter. The show kicks off with lighthearted, absurd tricks, followed by an escalating sequence of impressive juggling routines. As the show progresses, the pace picks up, with the audience playing even bigger roles.</p>
+                    <p>Through it all, Chalyman delivers a positive, uplifting message about joy, perseverance, and the power of a smile. Whether you're a juggling fan or just looking for a good time, this high-energy, heartwarming performance is something the whole family can enjoy!</p>
+                </div>
+                <div class="street-show-finale">
+                    <span class="finale-emoji">🔥</span>
+                    <div>
+                        <h3>Grand Finale — Fire Juggling</h3>
+                        <p>Flaming torches soaring through the air in a jaw-dropping display of skill and courage. An exciting moment that will have everyone on the edge of their seat, cheering in awe.</p>
+                    </div>
+                </div>
+                <div class="street-show-tags">
+                    <span>Family-Friendly</span>
+                    <span>Interactive</span>
+                    <span>All Ages</span>
+                    <span>Fire Juggling Finale</span>
+                    <span>Audience Participation</span>
+                    <span>Comedy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-visual">
+                <div class="about-frame">
+                    <div class="frame-inner">
+                        <div class="performer-silhouette">
+                            <img src="pictures/chalyman.jpg" alt="CHALYMAN — Juggler & Street Performer" class="performer-photo">
+                        </div>
+                    </div>
+                    <div class="frame-decoration frame-deco-1"></div>
+                    <div class="frame-decoration frame-deco-2"></div>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-label">The Artist</span>
+                <h2 class="section-title">Humor &<br>Juggling</h2>
+                <p class="about-text">
+                    Freddy Antonio Amador Morón — known as CHALYMAN — is a versatile circus artist, juggler, and clown with over two decades of experience across Latin America and Europe.
+                </p>
+                <p class="about-text">
+                    He has trained with legends like Sean Gandini and Bill Berry, won an Honorable Mention at Venezuela's first circus arts contest, directed the circus-theater production <em>"Involución"</em>, and toured Central America for 18 months. Multilingual in Spanish, English, and German — his performances carry warmth, humor, and genuine craft to every stage.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="20">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Shows Worldwide</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="7">0</span>
+                        <span class="stat-label">Objects Mastered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shows Section -->
+    <section id="shows" class="shows">
+        <div class="shows-header">
+            <span class="section-label">Performances</span>
+            <h2 class="section-title">Choose Your<br>Experience</h2>
+        </div>
+        
+        <div class="shows-grid">
+            <!-- Festivals -->
+            <div class="show-card" data-show="festivals">
+                <div class="card-number">01</div>
+                <div class="card-icon">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M32 8v48M8 32h48M16 16l32 32M48 16L16 48"/>
+                        <circle cx="32" cy="32" r="12"/>
+                    </svg>
+                </div>
+                <h3 class="card-title">Festivals</h3>
+                <p class="card-desc">
+                    High-energy performances that command the crowd. From intimate tent shows 
+                    to main stage spectacles, CHALYMAN delivers unforgettable festival moments.
+                </p>
+                <ul class="card-features">
+                    <li>30-45 minute sets</li>
+                    <li>Audience participation</li>
+                    <li>Sound system included</li>
+                </ul>
+                <a href="#contact" class="card-link">
+                    <span>Book for Festival</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <div class="card-bg"></div>
+            </div>
+
+            <!-- Corporate -->
+            <div class="show-card" data-show="corporate">
+                <div class="card-number">02</div>
+                <div class="card-icon">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="8" y="16" width="48" height="32" rx="2"/>
+                        <path d="M20 28h4v12h-4zM30 24h4v16h-4zM40 20h4v20h-4z"/>
+                        <circle cx="32" cy="8" r="3"/>
+                    </svg>
+                </div>
+                <h3 class="card-title">Corporate</h3>
+                <p class="card-desc">
+                    Professional entertainment that breaks the ice and brings teams together. 
+                    Perfect for conferences, galas, and company celebrations.
+                </p>
+                <ul class="card-features">
+                    <li>Customizable content</li>
+                    <li>Brand integration</li>
+                    <li>Networking energizer</li>
+                </ul>
+                <a href="#contact" class="card-link">
+                    <span>Book for Corporate</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <div class="card-bg"></div>
+            </div>
+
+            <!-- Private Events -->
+            <div class="show-card" data-show="private">
+                <div class="card-number">03</div>
+                <div class="card-icon">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M32 12c-12 0-20 8-20 16 0 10 12 24 20 24s20-14 20-24c0-8-8-16-20-16z"/>
+                        <circle cx="32" cy="28" r="6"/>
+                        <path d="M32 34v12"/>
+                    </svg>
+                </div>
+                <h3 class="card-title">Private Events</h3>
+                <p class="card-desc">
+                    Intimate performances that make your special occasion truly magical. 
+                    Birthdays, weddings, anniversaries, or any celebration worth remembering.
+                </p>
+                <ul class="card-features">
+                    <li>Personalized touch</li>
+                    <li>Flexible duration</li>
+                    <li>All ages welcome</li>
+                </ul>
+                <a href="#contact" class="card-link">
+                    <span>Book Private Event</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <div class="card-bg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-header">
+            <span class="section-label">Testimonials</span>
+            <h2 class="section-title">What People<br>Are Saying</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"CHALYMAN had our 2,000-strong festival crowd in absolute hysterics. Booked him three years running — he always delivers something completely new."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SK</div>
+                    <div class="author-info">
+                        <span class="author-name">Sarah K.</span>
+                        <span class="author-role">Programming Director, SunFest</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card testimonial-card--featured">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Our corporate gala needed an icebreaker and CHALYMAN completely transformed the room. Two hundred executives laughing like kids. Absolutely priceless."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MD</div>
+                    <div class="author-info">
+                        <span class="author-name">Marco D.</span>
+                        <span class="author-role">Head of Events, Meridian Group</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Highlight of our birthday party — but honestly the adults were the ones who couldn't look away. A genuine, extraordinary talent."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">YR</div>
+                    <div class="author-info">
+                        <span class="author-name">Yael R.</span>
+                        <span class="author-role">Private Client</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-section-header">
+            <span class="section-label">Photo Reel</span>
+            <h2 class="section-title">In The Field</h2>
+            <span class="gallery-drag-hint">← DRAG TO EXPLORE →</span>
+        </div>
+        <div class="gallery-reel" id="galleryReel">
+            <div class="gallery-item"><img src="pictures/chalymansplit.JPG" alt="Chalyman on stage" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/DAMI6978.jpg" alt="Chalyman performing" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/chaly4.jpg" alt="Chalyman juggling" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/chalykaris.jpg" alt="Chalyman" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/chalyman.jpeg" alt="Chalyman performing" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/IMG-20190714-WA0007.jpg" alt="Chalyman street show" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/IMG-20190714-WA0066.jpg" alt="Chalyman performance" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/IMG-20190714-WA0072.jpg" alt="Chalyman juggling" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/IMG-20190714-WA0073.jpg" alt="Chalyman street act" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/inbound103406923503245589.jpg" alt="Chalyman" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/maliulicni.jpg" alt="Chalyman abroad" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/maliulicni2.jpg" alt="Chalyman performance" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/maliulicni4.jpg" alt="Chalyman show" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/maliulicni5.jpg" alt="Chalyman performing" loading="lazy"></div>
+            <div class="gallery-item"><img src="pictures/1715604825354.jpg" alt="Chalyman" loading="lazy"></div>
+        </div>
+    </section>
+
+    <!-- More Videos Section -->
+    <section class="more-videos" id="videos">
+        <div class="more-videos-header">
+            <span class="section-label">Video Reel</span>
+            <h2 class="section-title">More Videos</h2>
+        </div>
+        <div class="more-videos-grid">
+            <div class="mv-card mv-card--featured">
+                <div class="mv-embed">
+                    <iframe src="https://www.youtube.com/embed/K460W30NF6w?rel=0&modestbranding=1"
+                        title="CHALYMAN — Promo Video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="mv-card-label">Promo Reel — 2026</div>
+            </div>
+            <div class="mv-card">
+                <div class="mv-embed">
+                    <iframe src="https://www.youtube.com/embed/yOP1J4ShuJk?rel=0&modestbranding=1"
+                        title="The Grand Entrance — Ball Finale" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="mv-card-label">The Grand Entrance — Ball Finale</div>
+            </div>
+            <div class="mv-card">
+                <div class="mv-embed">
+                    <iframe src="https://www.youtube.com/embed/wY7zT9M_q-w?rel=0&modestbranding=1"
+                        title="Lata y Media — Full Act" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="mv-card-label">Lata y Media — Full Act</div>
+            </div>
+            <div class="mv-card">
+                <div class="mv-embed">
+                    <iframe src="https://www.youtube.com/embed/qIphLg5Kjac?rel=0&modestbranding=1"
+                        title="Zagreb Street Mix" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="mv-card-label">Zagreb Street Mix</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote">
+        <div class="quote-content">
+            <div class="quote-mark quote-open">"</div>
+            <blockquote>
+                Let's create laughter<br>and wonder together.
+            </blockquote>
+            <div class="quote-mark quote-close">"</div>
+        </div>
+        <div class="quote-bg-text">WONDER</div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Book<br>The Show</h2>
+                <p class="contact-desc">
+                    Available for festivals, corporate events, and private performances worldwide. 
+                    Let's discuss how to make your event unforgettable.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-label">Response Time</span>
+                        <span class="contact-value">Within 24 hours</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Availability</span>
+                        <span class="contact-value">Worldwide</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 8a2 2 0 012-2h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8z"/>
+                            <path d="M10 12l5-3v6l-5-3z" fill="currentColor"/>
+                        </svg>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12a4 4 0 1 0 4 4V4c.667 1.333 2 3 5 3"/>
+                        </svg>
+                        <span>TikTok</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="bookingForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Email Address</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <select id="eventType" name="eventType" required>
+                            <option value="" disabled selected>Select Event Type</option>
+                            <option value="festival">Festival</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="private">Private Event</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="eventDate" name="eventDate" placeholder=" ">
+                        <label for="eventDate" class="date-label">Event Date (Optional)</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Tell me about your event</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        <span>Send Inquiry</span>
+                        <svg class="submit-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                        <div class="submit-bg"></div>
+                    </button>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon">✦</div>
+                    <h3>Message Sent!</h3>
+                    <p>I'll get back to you within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <span class="logo-text">CHALYMAN</span>
+                <span class="logo-star">✦</span>
+            </div>
+            <div class="footer-tagline">Where Laughter Meets Gravity</div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2026 CHALYMAN. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#shows">Shows</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
