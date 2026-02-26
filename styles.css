@@ -1313,6 +1313,19 @@ a {
     color: var(--color-text-muted);
 }
 
+.footer-credit {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    opacity: 0.5;
+    margin: 0;
+    letter-spacing: 0.04em;
+}
+.footer-credit strong {
+    color: var(--accent);
+    opacity: 1;
+    font-weight: 600;
+}
+
 .footer-links {
     display: flex;
     gap: 2rem;
